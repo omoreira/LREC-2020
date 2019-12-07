@@ -69,7 +69,9 @@ Each character in the WEC system’s output text is grouped into one of the foll
 - **Detected Not-Fixed (DN):** the source character was an error; the model successfully detected the error but failed to correct it, or used the wrong character to fixed. (e.g. the correct repair was changing ’a’ to ’b’ but the model changed ’b’ to ’c’ instead of ’a’).
 
 We focused on only two of the five classes of TPs and FPs. That is, we focused on the two classes that can help us measure the model's precision. The evaluation score is calculated as follows:
-*Evaluation = 1&times;TP count &minus; 5&times;FP count  *
+
+*Evaluation = 1&times;TP count &minus; 5&times;FP count*
+
 The adopted evaluation metric treats the task as a (near-binary) classification problem.  It measures the changes in text repairs performed on the Wiki pages by rewarding correctly fixed errors and penalizing system added errors. Ultimately, the metric is well-suited at quantifying the detection of orthographic errors rather than grammatical errors. It also operates at the character-level rather than at a token or word-level.
 ## References
 
